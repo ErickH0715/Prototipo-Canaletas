@@ -149,23 +149,7 @@
         <li><a href="#">Facebook</a></li>
         <li><a href="#">Instagram</a></li>
         <li><a href="#">Twitter</a></li>
-    // Select all sections with the class "page"
-    const pages = document.querySelectorAll(".page");
-
-    /**
-     * Function to navigate between pages.
-     * Hides all sections and displays the section corresponding to the given page ID.
-     * @param {string} page - The ID of the page to display.
-     */
-    function navigate(page) {
-      pages.forEach((section) => {
-        section.classList.add("hidden"); // Hide all sections
-      });
-      document.getElementById(page).classList.remove("hidden"); // Show the selected section
-    }
-      });
-      document.getElementById(page).classList.remove("hidden");
-    }
+   
   </script>
     document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll("nav ul li a").forEach((link) => {
