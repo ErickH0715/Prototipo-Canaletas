@@ -12,7 +12,7 @@
     crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Estilos personalizados */
+    /* Estilos base personalizados */
     body {
       font-family: Arial, sans-serif;
       background-color: #f5f5dc;
@@ -80,74 +80,78 @@
   </style>
 </head>
 <body>
-  <!-- Nuevo navbar inspirado en Bootstrap -->
+  <!-- Offcanvas Navbar basado en Bootstrap -->
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6ab0c7;">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="https://github.com/ErickH0715/Course-Project/blob/main/logo.png?raw=true" alt="Strait Coffee Logo" style="height: 50px; margin-right: 10px;">
         Strait Coffee
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-              data-bs-target="#navbarSupportedContent" 
-              aria-controls="navbarSupportedContent" 
-              aria-expanded="false" 
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" 
+              data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" 
               aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" onclick="navigate('home')">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" onclick="navigate('contact')">Contact</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" 
-               aria-expanded="false">
-              Menu
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#" onclick="navigate('menu')">Nuestro Menú</a></li>
-              <li><a class="dropdown-item" href="#">Especiales</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Más</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Deshabilitado</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
-          <button class="btn btn-outline-light" type="submit">Buscar</button>
-        </form>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar2" 
+           aria-labelledby="offcanvasNavbar2Label" style="background-color: #6ab0c7; color: #ffffff;">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Strait Coffee</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" 
+                  aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#" onclick="navigate('home')">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" onclick="navigate('contact')">Contacto</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" 
+                 aria-expanded="false">
+                Menú
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#" onclick="navigate('menu')">Nuestro Menú</a></li>
+                <li><a class="dropdown-item" href="#">Especiales</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Algo más</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex mt-3 mt-lg-0" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+            <button class="btn btn-outline-light" type="submit">Buscar</button>
+          </form>
+        </div>
       </div>
     </div>
   </nav>
-
+  
+  <!-- Contenido principal -->
   <main id="content">
     <section id="home" class="page">
       <div class="container-custom">
-        <img class="content-img" src="https://github.com/ErickH0715/Course-Project/blob/main/barista.jpg?raw=true" alt="Barista preparing coffee">
+        <img class="content-img" src="https://github.com/ErickH0715/Course-Project/blob/main/barista.jpg?raw=true" alt="Barista preparando café">
         <div class="text">
           <p>
-            Once upon a time in 1996 we opened a small café and roastery. After many years of serving our fine coffees from around the world...we grew out of our small space and we realized we needed more room with which to bake, and cook and serve our many loyal and new customers.
+            Once upon a time in 1996 abrimos un pequeño café y tostador. Después de muchos años sirviendo nuestros finos cafés de todo el mundo, creímos que necesitábamos un espacio mayor para hornear, cocinar y atender a nuestros leales y nuevos clientes.
           </p>
           <p>
-            After a few diversions, illusions and contusions, we acquired our larger space on the corner of Wilson Creek Plaza. Our café features all the coffees that we roast. We serve amazing fresh, made to order food, and delicious baked goods, made from scratch.
+            Tras algunas desviaciones, ilusiones y contusiones, adquirimos un local más amplio en la esquina de Wilson Creek Plaza. Nuestro café cuenta con todos los cafés que tostamos. Servimos comida fresca hecha a pedido, y deliciosos productos horneados, elaborados desde cero.
           </p>
         </div>
       </div>
     </section>
-
+    
     <section id="contact" class="page hidden">
       <div class="container">
         <h2>Contáctanos</h2>
         <p>Email: info@straitcoffee.com</p>
       </div>
     </section>
-
+    
     <section id="menu" class="page hidden">
       <div class="container">
         <h2>Nuestro Menú</h2>
@@ -155,11 +159,11 @@
       </div>
     </section>
   </main>
-
+  
   <footer>
     <p>Created by Yin Maung</p>
   </footer>
-
+  
   <!-- Bootstrap Bundle with Popper -->
   <script 
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
